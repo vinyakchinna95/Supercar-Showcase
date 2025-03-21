@@ -1,0 +1,127 @@
+.card_box {
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+    flex-wrap: wrap; 
+    row-gap: 15px;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+}
+
+.speed-text {
+    white-space: pre-line;
+}
+
+/* Custom Card Design */
+.custom-card {
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background-color 0.5s, color 0.5s, box-shadow 0.3s;
+}
+
+.custom-card:hover {
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Title Resizing */
+.title-responsive {
+    font-size: clamp(1.5rem, 5vw, 4rem);
+    margin-bottom: 15px;
+}
+
+/* Responsive Car Image */
+.car-image-responsive {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive Arrow Buttons */
+.btn-responsive {
+    padding: 10px 20px;
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    transition: transform 0.2s ease-in-out;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.title-responsive {
+    font-size: clamp(2rem, 5vw, 4.5rem); /* Adjust size for different screens */
+    text-align: center;
+    margin-bottom: 15px;
+     /* Allows text to wrap if needed */
+}
+
+
+@media (max-width: 1024px) {
+    .car-image-responsive {
+        max-width: 85%;
+        max-height: 450px;
+    }
+
+    .custom-card {
+        width: 145px;
+        height: 145px;
+    }
+}
+
+@media (max-width: 768px) {
+    .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card_box {
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+
+    .custom-card {
+        width: 140px;
+        height: 140px;
+    }
+
+    .car-image-responsive {
+        max-width: 95%;
+        max-height: 350px;
+        transform: scale(1.05);
+    }
+
+    .btn-responsive {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-card {
+        width: 120px;
+        height: 120px;
+    }
+
+    .car-image-responsive {
+        max-width: 90%;
+        max-height: 280px;
+    }
+
+    .btn-responsive {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+}
